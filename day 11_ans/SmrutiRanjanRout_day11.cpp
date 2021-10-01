@@ -31,7 +31,16 @@ int count_f(int n, int count)
         return count;
     }
     count++;
-    return count_f(n / 2, count);
+    if (n % 2 == 0)
+        return count_f(n / 2, count);
+
+    else
+    {
+        if ((n / 2) % 2 == 0)
+            return count_f(n / 2, count);
+        else
+            return count_f((n / 2) + 1, count);
+    }
 }
 void solution()
 {
