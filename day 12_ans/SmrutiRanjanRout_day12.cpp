@@ -26,26 +26,34 @@ using namespace std;
 //-------------------------------------------------------------------------------------------------
 void solution()
 {
-    string str;
-    cin >> str;
-    string c_str;
-    c_str.push_back(str[0]);
-    int count = 0;
-    for (ll i = 1; i < str.size(); i++)
+    ll n;
+    cin >> n;
+    vl temp(n, 0);
+    vector<vector<ll>> v(n, temp);
+    ll sum_row = 0, sum_col = 0;
+
+    for (int i = 0; i < n; i++)
     {
-        if (str[i] == str[i - 1])
+        for (int j = 0; j < n; j++)
         {
-            count++;
+            cin >> v[i][j];
+            if (i == 0 || i == n - 1)
+
+                sum_row += v[i][j];
+
+            if (j == 0 || j == n - 1)
+
+                sum_col += v[i][j];
         }
     }
-    cout << count << endl;
+    cout << abs(sum_row - sum_col) << endl;
 }
 
 int main()
 {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
-    freopen("SmrutiRanjanRout_day9_output.txt", "w", stdout);
+    freopen("SmrutiRanjanRout_day12_output.txt", "w", stdout);
 #endif
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

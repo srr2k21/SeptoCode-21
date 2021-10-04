@@ -26,23 +26,27 @@ using namespace std;
 //-------------------------------------------------------------------------------------------------
 void solution()
 {
-    string str;
-    cin >> str;
-    sl s;
-    for (int i = 0; i < str.size(); i++)
-        s.insert(str[i]);
+    ll n;
+    cin >> n;
+    vector<int> v(n);
+    for (int i = 0; i < n; i++)
+        cin >> v[i];
 
-       if (s.size() >= 26)
-        cout << "Pass" << endl;
-    else
-        cout << "Fail" << endl;
+    for (int i = 0; i < n - 1; i++)
+    {
+        if (v[i] > v[i + 1])
+        {
+            cout << i + 1 << endl;
+            break;
+        }
+    }
 }
 
 int main()
 {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
-    freopen("SmrutiRanjanRout_day10_output.txt", "w", stdout);
+    freopen("SmrutiRanjanRout_day14_output.txt", "w", stdout);
 #endif
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
