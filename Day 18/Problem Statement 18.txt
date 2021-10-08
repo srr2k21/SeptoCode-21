@@ -1,0 +1,36 @@
+A number of balls are kept in a basket each named in the range [1,n]. some students picked few balls randomly and changed their numbers to existing numbers in the box and then added back. Now box has unique numbers + duplicate numbers. Find the original numbers on the balls whose numbers were changed.
+    
+Input variables:-
+   int t: no. of test cases
+   int n: range 
+   int arr[]: array conatining the original and duplicate numbered balls
+        
+Input Description:
+-First line of input consists of t, the number of test cases
+-Next each lines consist of n the range 
+-Next line consist of the array conatining the original and duplicate numbered balls
+
+Output Description:-
+   Print the balls whose numbers were changed
+    
+Constraints:-
+ -> 1<=t,n<=10
+ ->1<= value of each array element <=10
+    
+ Sample Input:
+2
+8
+4 3 2 7 8 2 3 1
+2
+1 1
+    
+Sample Output:
+5 6
+2
+
+
+Explanation:
+In the first case, length of array is 8
+1 2 3 4 are present, but 5 and 6 are missing, and then 7 and 8 are present. So the original missing numbers are 5 and 6.
+
+In the second case, length of array is 2, 1 is present, but 2 is missing. So missing number is 2.
