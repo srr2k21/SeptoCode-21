@@ -27,7 +27,7 @@ Output:
 lucky
 unlucky
 
-Explanation 1: Input 19
+Explanation 1: Input 19 
  19 => 1^2+9^2 = 82
  82 => 8^2+2^2 = 68
  68 => 6^2+8^2 = 100
